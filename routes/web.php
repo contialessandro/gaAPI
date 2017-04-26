@@ -1,4 +1,7 @@
 <?php
+use App\Comment;
+use Spatie\Analytics\Period;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,3 +17,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('data', 'ViewController@view');
+/*Route::get('/data', function () {
+    $analyticsData = Analytics::fetchTopBrowsers(Period::days(14));
+    dd($analyticsData);
+});*/
+
